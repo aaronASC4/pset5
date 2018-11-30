@@ -13,7 +13,7 @@ public class BankAccount {
 	 * @param user
 	 */
 	
-	public BankAccount(double balance, User accountHolder) {
+	public BankAccount(long accountNumber, double balance, User accountHolder) {
 		this.accountNumber = BankAccount.generatedAccountNumber++;
 		this.balance = balance;
 		this.accountHolder = accountHolder;

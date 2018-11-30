@@ -12,11 +12,12 @@
 public class User {
 	
 	private int pin;
-	private String name;
+	private String fname;
+	private String lname;
 	private String dob;
 	private String address;
 	private String city;
-	private String phone;
+	private long phone;
 	private String state;
 	private String postal;
 	
@@ -28,9 +29,10 @@ public class User {
 	 * @param address
 	 */
 	
-	public User(int pin, String name, String dob, String address, String city, String phone, String state, String postal) {
+	public User(int pin, String fname, String lname, String dob, String address, String city, long phone, String state, String postal) {
 		this.pin = pin;
-		this.name = name;
+		this.fname = fname;
+		this.lname= lname;
 		this.dob = dob;
 		this.address = address;
 		this.city = city;
@@ -57,8 +59,11 @@ public class User {
 	 * @return name
 	 */
 	
-	public String getName() {
-		return name;
+	public String getLName() {
+		return lname;
+	}
+	public String getFName() {
+		return fname;
 	}
 	
 	public String getState() {
@@ -75,7 +80,7 @@ public class User {
 	 * @return name
 	 */
 	
-	public String getPhone() {
+	public long getPhone() {
 		return phone;
 	}
 	/**
@@ -122,10 +127,13 @@ public class User {
 	 * @param name the new name
 	 */
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setFName(String fname) {
+		this.fname = fname;
 	}
-	
+
+	public void setLName(String lname) {
+		this.lname = lname;
+	}
 	/**
 	 * Sets the value of the user's phone.
 	 * 
@@ -133,7 +141,7 @@ public class User {
 	 */
 	
 	
-	public void setPhone(String phone) {
+	public void setPhone(long phone) {
 		this.phone = phone;
 	}
 	
