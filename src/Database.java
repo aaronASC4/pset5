@@ -16,7 +16,9 @@ public class Database {
 	
 	private String[] accounts;
 	
-	public getAllAccounts;
+	public String[] getAllAccounts() {
+		
+	}
 	
 	public BankAccount getAccount(long accountNumber) throws FileNotFoundException, IOException {
 		   BankAccount account = null;
@@ -45,7 +47,7 @@ public class Database {
 			}
 			return account;
 		}
-		public void updateAccount(BankAccount account, BankAccount destaination) throws IOException {
+		public void updateAccount(BankAccount account, BankAccount destination) throws IOException {
 			accounts = getAllAccounts();
 			
 			try (BufferedWriter bw = new BufferedWriter(new FileWriter("accounts-db.txt"))) {
@@ -57,11 +59,13 @@ public class Database {
 							newAccount = false;
 						}
 					}
-					
-					
+				
+				if (destination != null) {
 				}
+					
 			}
 		}
+	}
 
 		private Object getAllAccounts() {
 			// TODO Auto-generated method stub
